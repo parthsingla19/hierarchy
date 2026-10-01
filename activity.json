@@ -1,0 +1,32 @@
+[
+  {
+    "account_id": "acc_root1",
+    "ts": 1,
+    "amount_cents": 1000
+  },
+  {
+    "account_id": "acc_child1",
+    "ts": 2,
+    "amount_cents": 2000
+  },
+  {
+    "account_id": "acc_grandchild1",
+    "ts": 3,
+    "amount_cents": 500
+  },
+  {
+    "account_id": "acc_child2",
+    "ts": 4,
+    "amount_cents": 1500
+  },
+  {
+    "account_id": "acc_root2",
+    "ts": 5,
+    "amount_cents": 3000
+  },
+  {
+    "account_id": "acc_ghost",
+    "ts": 6,
+    "amount_cents": 999
+  }
+]

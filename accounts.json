@@ -1,0 +1,22 @@
+{
+  "acc_root1": {
+    "name": "Org A",
+    "parent_id": null
+  },
+  "acc_child1": {
+    "name": "Division A1",
+    "parent_id": "acc_root1"
+  },
+  "acc_child2": {
+    "name": "Division A2",
+    "parent_id": "acc_root1"
+  },
+  "acc_grandchild1": {
+    "name": "Team A1a",
+    "parent_id": "acc_child1"
+  },
+  "acc_root2": {
+    "name": "Org B",
+    "parent_id": null
+  }
+}
