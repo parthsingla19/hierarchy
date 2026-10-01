@@ -3,6 +3,7 @@ Your solution. See README.md — build it part by part. No server, no API calls.
 """
 
 import json
+from collections import defaultdict
 
 
 def main():
@@ -10,10 +11,20 @@ def main():
         accounts = json.load(f)
     with open("activity.json") as f:
         activity = json.load(f)
-
-    # Part 1: own totals + orphan detection
-    # Part 2: rollup (recursive, using a parent->children map)
-    # Part 3: root-level report
+    orphans = []
+    balances = defaultdict(int)
+    for txn in activity:
+        acc_id = txn["account_id"]
+        orphan = True
+        for account_id, account_info in accounts.items():
+            if account_id == acc_id:
+                orphan = False
+                balances[acc_id] += txn["amount_cents"]
+                break
+        if orphan:
+            orphans.append(acc_id)
+    print(balances)
+    print(orphans)
 
 
 if __name__ == "__main__":
